@@ -72,9 +72,6 @@ flowchart TD
     GenomeAssembly1.v2[Assembly1.v2] --> GenomeAssembly1.v2.hap2[Assembly1.v2.hap2]:::Haplotype
     GenomeAssembly1.v3[Assembly1.v3] --> GenomeAssembly1.v3.hap1[Assembly1.v3.hap1]:::Haplotype
     GenomeAssembly1.v3[Assembly1.v3] --> GenomeAssembly1.v3.hap2[Assembly1.v3.hap2]:::Haplotype
-
-    IlluminaLibrary1[Illumina Library1]
-    IlluminaLibrary2[Illumina Library2]
     
     Individual2 --> Sample6[Sample6]:::Sample
     Individual2 --> Sample7[Sample7]:::Sample
@@ -112,15 +109,5 @@ flowchart TD
     classDef Reads fill:#ffd966,font-color:black,font-size:30
     classDef Assembly fill:#c27ba0,font-color:black,font-size:30
     classDef Haplotype fill:#e06666,font-color:black,font-size:30
-    
-
-
-```
-
-
-
-```mermaid
-
-
 
 ```
