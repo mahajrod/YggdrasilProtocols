@@ -105,7 +105,7 @@ flowchart TD
     GenomeAssembly2.v1 --> GenomeAssembly2.v1.hap1[Assembly2.v1.hap1]:::Haplotype
     GenomeAssembly2.v1 --> GenomeAssembly2.v1.hap2[Assembly2.v1.hap2]:::Haplotype
     
-    classDef Individual fill:#b6d7a8,font-color:black,font-size:15
+    classDef Individual fill:#b6d7a8,font-color:black,font-size:30
     classDef Sample fill:#68E6CF,font-color:black
     classDef Library fill:#6fa8dc,font-color:black
     classDef Reads fill:#ffd966,font-color:black
