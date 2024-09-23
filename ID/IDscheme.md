@@ -1,7 +1,7 @@
 ```mermaid
 
 flowchart TD
-    Project[Project1] --> Individual1[Individual1]:::Individual
+    Project[Project1]:::Project --> Individual1[Individual1]:::Individual
     Project --> Individual2[Individual2]:::Individual
     
     Individual1 --> Sample1[Sample1]:::Sample
@@ -105,6 +105,7 @@ flowchart TD
     GenomeAssembly2.v1 --> GenomeAssembly2.v1.hap1[Assembly2.v1.hap1]:::Haplotype
     GenomeAssembly2.v1 --> GenomeAssembly2.v1.hap2[Assembly2.v1.hap2]:::Haplotype
     
+    classDef Project fill:#b6d7a8,font-color:black,font-size:30
     classDef Individual fill:#b6d7a8,font-color:black,font-size:30
     classDef Sample fill:#68E6CF,font-color:black,font-size:30
     classDef Library fill:#6fa8dc,font-color:black,font-size:30
