@@ -168,5 +168,5 @@ flowchart TD
 | DNA Extract | Nanopore library   | one-to-many  | **YGG**XXX_YY**P**VV     | **YGG**001_01**P**01 |
 | RNA Extract | RNA library        | one-to-many  | **YGG**XXX_YY**N**VV     | **YGG**001_02**N**01 |
 | Library     | Reads              | one-to-many  | technology dependent     | technology dependent |
-| Reads       | Assembly           | many-to-many | GenSpiWW<b>.v<\b>Q       | LycPic1.v1           |
+| Reads       | Assembly           | many-to-many | GenSpiWW<b>.v</b>Q       | LycPic1.v1           |
 | Assembly    | Assembly haplotype | many-to-many | GenSpiWW**.v**Q**.hap**T | LycPic1.v1.hap1      |
