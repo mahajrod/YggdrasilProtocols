@@ -154,19 +154,19 @@ flowchart TD
 
 ```
 
-| Parent      | Entry              | Relations    | Template                 | Example              | 
-|-------------|--------------------|--------------|--------------------------|----------------------|
-| .           | Project            | .            | **YGG**XXX               | **YGG**001           | 
-| Project     | Individual         | one-to-many  | **YGG**XXX**.IND**WW     | **YGG**001**.IND**01 |
-| Individual  | Sample             | one-to-many  | **YGG**XXX_YY            | **YGG**001_01        |
-| Sample      | DNA Extract        | one-to-many  | **YGG**XXX_YY**D**VV     | **YGG**001_01**D**02 |
-| Sample      | RNA Extract        | one-to-many  | **YGG**XXX_YY**R**VV     | **YGG**001_02**R**03 |
-| Sample      | HiC crosslinking   | one-to-many  | **YGG**XXX_YY**C**VV     | **YGG**001_03**C**01 |
-| Sample      | HiC reaction       | one-to-many  | **YGG**XXX_YY**H**VV     | **YGG**001_03**H**02 |
-| DNA Extract | PacBio library     | one-to-many  | **YGG**XXX_YY**L**VV     | **YGG**001_01**L**01 |
-| DNA Extract | Illumina library   | one-to-many  | **YGG**XXX_YY**A**VV     | **YGG**001_01**A**01 |
-| DNA Extract | Nanopore library   | one-to-many  | **YGG**XXX_YY**P**VV     | **YGG**001_01**P**01 |
-| RNA Extract | RNA library        | one-to-many  | **YGG**XXX_YY**N**VV     | **YGG**001_02**N**01 |
-| Library     | Reads              | one-to-many  | technology dependent     | technology dependent |
-| Reads       | Assembly           | many-to-many | GenSpiWW<b>.v</b>Q       | LycPic1.v1           |
-| Assembly    | Assembly haplotype | many-to-many | GenSpiWW**.v**Q**.hap**T | LycPic1.v1.hap1      |
+| Parent      | Entry              | Relations    | Template                       | Example                       | 
+|-------------|--------------------|--------------|--------------------------------|-------------------------------|
+| .           | Project            | .            | **YGG**XXX                     | **YGG**001                    | 
+| Project     | Individual         | one-to-many  | **YGG**XXX<b>.IND</b>WW        | **YGG**001<b>.IND</b>01       |
+| Individual  | Sample             | one-to-many  | **YGG**XXX_YY                  | **YGG**001_01                 |
+| Sample      | DNA Extract        | one-to-many  | **YGG**XXX_YY**D**VV           | **YGG**001_01**D**02          |
+| Sample      | RNA Extract        | one-to-many  | **YGG**XXX_YY**R**VV           | **YGG**001_02**R**03          |
+| Sample      | HiC crosslinking   | one-to-many  | **YGG**XXX_YY**C**VV           | **YGG**001_03**C**01          |
+| Sample      | HiC reaction       | one-to-many  | **YGG**XXX_YY**H**VV           | **YGG**001_03**H**02          |
+| DNA Extract | PacBio library     | one-to-many  | **YGG**XXX_YY**L**VV           | **YGG**001_01**L**01          |
+| DNA Extract | Illumina library   | one-to-many  | **YGG**XXX_YY**A**VV           | **YGG**001_01**A**01          |
+| DNA Extract | Nanopore library   | one-to-many  | **YGG**XXX_YY**P**VV           | **YGG**001_01**P**01          |
+| RNA Extract | RNA library        | one-to-many  | **YGG**XXX_YY**N**VV           | **YGG**001_02**N**01          |
+| Library     | Reads              | one-to-many  | technology dependent           | technology dependent          |
+| Reads       | Assembly           | many-to-many | GenSpiWW<b>.v</b>Q             | LycPic1<b>.v</b>1             |
+| Assembly    | Assembly haplotype | many-to-many | GenSpiWW<b>.v</b>Q<b>.hap</b>T | LycPic1<b>.v</b>1<b>.hap</b>1 |
