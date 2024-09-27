@@ -151,7 +151,6 @@ flowchart TD
     classDef Assembly fill:#c27ba0,font-color:black,font-size:30
     classDef Haplotype fill:#e06666,font-color:black,font-size:30
 
-
 ```
 
 | Parent      | Entry              | Relations    | Template                       | Example                       | Comments                                                                 |
