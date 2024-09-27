@@ -12,7 +12,7 @@ flowchart TD
     Sample1 --> DNAExtract1[DNA Extract 1]:::DNAExtract
     Sample1 --> DNAExtract2[DNA Extract 2]:::DNAExtract
     Sample2 --> DNAExtract3[DNA Extract 3]:::DNAExtract
-    Sample3 --> HiCCrosslinking1["HiC Crosslinking1"]:::HiCCrosslinking 
+    Sample1 --> HiCCrosslinking1["HiC Crosslinking1"]:::HiCCrosslinking 
     Sample3 --> HiCCrosslinking2["HiC Crosslinking2"]:::HiCCrosslinking
     
     Sample4 --> RNAExtract1["RNA Extract 1"]:::RNAExtract
@@ -89,7 +89,7 @@ flowchart TD
     classDef Individual fill:#b6d7a8,font-color:black,font-size:30
     classDef Sample fill:#68E6CF,font-color:black,font-size:30
     classDef DNAExtract fill:green,font-color:black,font-size:30
-    classDef HiCCrosslinking fill:blue,font-color:black,font-size:30
+    classDef HiCCrosslinking fill:lime,font-color:black,font-size:30
     classDef HiCReaction fill:orange,font-color:black,font-size:30
     classDef RNAExtract fill:magenta,font-color:black,font-size:30
     classDef Library fill:#6fa8dc,font-color:black,font-size:30
