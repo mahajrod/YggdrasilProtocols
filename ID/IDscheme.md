@@ -1,40 +1,52 @@
 ```mermaid
 
 flowchart TD
-    Project[Project1]:::Project --> Individual1[Individual1]:::Individual
-    Project --> Individual2[Individual2]:::Individual
+    Project[Project 1]:::Project --> Individual1[Individual 1]:::Individual
     
-    Individual1 --> Sample1[Sample1]:::Sample
-    Individual1 --> Sample2[Sample2]:::Sample
-    Individual1 --> Sample3[Sample3]:::Sample
-    Individual1 --> Sample4[Sample4]:::Sample
-    Individual1 --> Sample5[Sample5]:::Sample
+    Individual1 --> Sample1[Sample 1]:::Sample
+    Individual1 --> Sample2[Sample 2]:::Sample
+    Individual1 --> Sample3[Sample 3]:::Sample
+    Individual1 --> Sample4[Sample 4]:::Sample
+    Individual1 --> Sample5[Sample 5]:::Sample
     
-    Sample1 --> HiFiLibrary1[HiFi Library1]:::Library
-    Sample1 --> HiFiLibrary2[HiFi Library2]:::Library
-    Sample1 --> NanoporeLibrary1[Nanopore Library1]:::Library
-    Sample2 --> NanoporeLibrary2[Nanopore Library2]:::Library
+    Sample1 --> DNAExtract1[DNA Extract 1]:::DNAExtract
+    Sample1 --> DNAExtract2[DNA Extract 2]:::DNAExtract
+    Sample2 --> DNAExtract3[DNA Extract 3]:::DNAExtract
+    Sample3 --> HiCCrosslinking1["HiC Crosslinking1"]:::HiCCrosslinking 
+    Sample3 --> HiCCrosslinking2["HiC Crosslinking2"]:::HiCCrosslinking
     
-    Sample3 --> HiCLibrary1[HiC Library1]:::Library
-    Sample3 --> HiCLibrary2[HiC Library2]:::Library
-    Sample4 --> RNALibrary1[RNA Library1]:::Library
-    Sample5 --> RNALibrary2[RNA Library2]:::Library
+    Sample4 --> RNAExtract1["RNA Extract 1"]:::RNAExtract
+    Sample5 -->RNAExtract2["RNA Extract 2"]:::RNAExtract
 
-    HiFiLibrary1 --> HiFIReads1[HiFi Reads1]:::Reads 
-    HiFiLibrary1 --> HiFIReads2[HiFi Reads2]:::Reads
     
-    HiFiLibrary2 --> HiFIReads3[HiFi Reads3]:::Reads
-    HiFiLibrary2 --> HiFIReads4[HiFi Reads4]:::Reads
+    DNAExtract1 --> HiFiLibrary1[HiFi Library 1]:::Library
+    DNAExtract2 --> HiFiLibrary2[HiFi Library 2]:::Library
+    DNAExtract2 --> NanoporeLibrary1[Nanopore Library 1]:::Library
+    DNAExtract3 --> NanoporeLibrary2[Nanopore Library 2]:::Library
     
-    NanoporeLibrary1 --> NanoporeReads1[Nanopore Reads1]:::Reads
-    NanoporeLibrary2 --> NanoporeReads2[Nanopore Reads1]:::Reads
+    HiCCrosslinking1 --> HiCReaction1[HiC Reaction 1]:::HiCReaction
+    HiCCrosslinking2 --> HiCReaction2[HiC Reaction 2]:::HiCReaction
+    HiCReaction1 --> HiCLibrary1[HiC Library 1]:::Library
+    HiCReaction2 --> HiCLibrary2[HiC Library 2]:::Library
     
-    HiCLibrary1 --> HiСReads1[HiС Reads1]:::Reads 
-    HiCLibrary1 --> HiСReads2[HiС Reads2]:::Reads
-    HiCLibrary2 --> HiСReads3[HiС Reads3]:::Reads
+    RNAExtract1 --> RNALibrary1[RNA Library 1]:::Library
+    RNAExtract2 --> RNALibrary2[RNA Library 2]:::Library
     
-    RNALibrary1[RNA Library1] -->  RNAReads1[RNA Reads1]:::Reads
-    RNALibrary2[RNA Library2] -->  RNAReads2[RNA Reads2]:::Reads
+    HiFiLibrary1 --> HiFIReads1[HiFi Reads 1]:::Reads 
+    HiFiLibrary1 --> HiFIReads2[HiFi Reads 2]:::Reads
+    
+    HiFiLibrary2 --> HiFIReads3[HiFi Reads 3]:::Reads
+    HiFiLibrary2 --> HiFIReads4[HiFi Reads 4]:::Reads
+    
+    NanoporeLibrary1 --> NanoporeReads1[Nanopore Reads 1]:::Reads
+    NanoporeLibrary2 --> NanoporeReads2[Nanopore Reads 1]:::Reads
+    
+    HiCLibrary1 --> HiСReads1[HiС Reads 1]:::Reads 
+    HiCLibrary1 --> HiСReads2[HiС Reads 2]:::Reads
+    HiCLibrary2 --> HiСReads3[HiС Reads 3]:::Reads
+    
+    RNALibrary1[RNA Library 1] --> RNAReads1[RNA Reads 1]:::Reads
+    RNALibrary2[RNA Library 2] --> RNAReads2[RNA Reads 2]:::Reads
     
     HiFIReads1 --> GenomeAssembly1.v1[Assembly1.v1]:::Assembly
     HiFIReads2 --> GenomeAssembly1.v1[Assembly1.v1]
@@ -73,6 +85,23 @@ flowchart TD
     GenomeAssembly1.v3[Assembly1.v3] --> GenomeAssembly1.v3.hap1[Assembly1.v3.hap1]:::Haplotype
     GenomeAssembly1.v3[Assembly1.v3] --> GenomeAssembly1.v3.hap2[Assembly1.v3.hap2]:::Haplotype
     
+    classDef Project fill:#b6d7a8,font-color:black,font-size:30
+    classDef Individual fill:#b6d7a8,font-color:black,font-size:30
+    classDef Sample fill:#68E6CF,font-color:black,font-size:30
+    classDef DNAExtract fill:green,font-color:black,font-size:30
+    classDef HiCCrosslinking fill:blue,font-color:black,font-size:30
+    classDef HiCReaction fill:orange,font-color:black,font-size:30
+    classDef RNAExtract fill:magenta,font-color:black,font-size:30
+    classDef Library fill:#6fa8dc,font-color:black,font-size:30
+    classDef Reads fill:#ffd966,font-color:black,font-size:30
+    classDef Assembly fill:#c27ba0,font-color:black,font-size:30
+    classDef Haplotype fill:#e06666,font-color:black,font-size:30
+
+```
+
+```mermaid
+flowchart TD
+    Project[Project1]:::Project --> Individual2[Individual2]:::Individual
     Individual2 --> Sample6[Sample6]:::Sample
     Individual2 --> Sample7[Sample7]:::Sample
     Individual2 --> Sample8[Sample8]:::Sample
@@ -109,5 +138,6 @@ flowchart TD
     classDef Reads fill:#ffd966,font-color:black,font-size:30
     classDef Assembly fill:#c27ba0,font-color:black,font-size:30
     classDef Haplotype fill:#e06666,font-color:black,font-size:30
+
 
 ```
