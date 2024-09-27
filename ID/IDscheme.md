@@ -12,8 +12,8 @@ flowchart TD
     Sample1 --> DNAExtract1[DNA Extract 1]:::DNAExtract
     Sample1 --> DNAExtract2[DNA Extract 2]:::DNAExtract
     Sample2 --> DNAExtract3[DNA Extract 3]:::DNAExtract
-    Sample1 --> HiCCrosslinking1["HiC Crosslinking1"]:::HiCCrosslinking 
-    Sample3 --> HiCCrosslinking2["HiC Crosslinking2"]:::HiCCrosslinking
+    Sample1 --> HiCCrosslinking1["HiC Crosslinking 1"]:::HiCCrosslinking 
+    Sample3 --> HiCCrosslinking2["HiC Crosslinking 2"]:::HiCCrosslinking
     
     Sample4 --> RNAExtract1["RNA Extract 1"]:::RNAExtract
     Sample5 -->RNAExtract2["RNA Extract 2"]:::RNAExtract
@@ -101,27 +101,35 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Project[Project1]:::Project --> Individual2[Individual2]:::Individual
-    Individual2 --> Sample6[Sample6]:::Sample
-    Individual2 --> Sample7[Sample7]:::Sample
-    Individual2 --> Sample8[Sample8]:::Sample
-    Individual2 --> Sample9[Sample9]:::Sample
-    Individual2 --> Sample10[Sample10]:::Sample
+    Project[Project 1]:::Project --> Individual2[Individual 2]:::Individual
+    Individual2 --> Sample6[Sample 6]:::Sample
+    Individual2 --> Sample7[Sample 7]:::Sample
+    Individual2 --> Sample8[Sample 8]:::Sample
+    Individual2 --> Sample9[Sample 9]:::Sample
+    Individual2 --> Sample10[Sample 10]:::Sample
     
-    Sample6 --> RNALibrary3[RNA Library3]:::Library
-    Sample7 --> RNALibrary4[RNA Library4]:::Library
-    Sample8 --> RNALibrary5[RNA Library5]:::Library
-    Sample8 --> HiFiLibrary3[HiFi Library3]:::Library
-    Sample9 --> HiFiLibrary4[HiFi Library4]:::Library
-    Sample10 --> HiCLibrary3[HiC Library3]:::Library
+    Sample6 --> RNAExtract3["RNA Extract 3"]:::RNAExtract
+    Sample7 --> RNAExtract4["RNA Extract 4"]:::RNAExtract
+    Sample8 --> RNAExtract5["RNA Extract 5"]:::RNAExtract
+    Sample8 --> DNAExtract4[DNA Extract 4]:::DNAExtract
+    Sample9 --> HiCCrosslinking3["HiC Crosslinking 3"]:::HiCCrosslinking
     
-    RNALibrary3[RNA Library3] --> RNAReads3[RNA Reads5]:::Reads
-    RNALibrary4[RNA Library4] --> RNAReads4[RNA Reads6]:::Reads
-    RNALibrary5[RNA Library5] --> RNAReads5[RNA Reads7]:::Reads
-    HiFiLibrary3[HiFi Library3] --> HiFIReads5[HiFi Reads5]:::Reads
-    HiFiLibrary4[HiFi Library4] --> HiFIReads6[HiFi Reads 6]:::Reads
-    HiCLibrary3[HiC Library3] --> HiСReads4[HiС Reads4]:::Reads
-    HiCLibrary3[HiC Library3] --> HiСReads5[HiС Reads5]:::Reads
+    RNAExtract3 --> RNALibrary3[RNA Library 3]:::Library
+    RNAExtract4 --> RNALibrary4[RNA Library 4]:::Library
+    RNAExtract5 --> RNALibrary5[RNA Library 5]:::Library
+    
+    HiCCrosslinking3 --> HiCReaction3[HiC Reaction 3]:::HiCReaction
+    HiCReaction3 --> HiCLibrary3[HiC Library 3]:::Library
+    DNAExtract4 --> HiFiLibrary3[HiFi Library 3]:::Library
+    DNAExtract4 --> HiFiLibrary4[HiFi Library 4]:::Library
+    
+    RNALibrary3[RNA Library 3] --> RNAReads3[RNA Reads 5]:::Reads
+    RNALibrary4[RNA Library 4] --> RNAReads4[RNA Reads 6]:::Reads
+    RNALibrary5[RNA Library 5] --> RNAReads5[RNA Reads 7]:::Reads
+    HiFiLibrary3[HiFi Library 3] --> HiFIReads5[HiFi Reads 5]:::Reads
+    HiFiLibrary4[HiFi Library 4] --> HiFIReads6[HiFi Reads 6]:::Reads
+    HiCLibrary3[HiC Library 3] --> HiСReads4[HiС Reads 4]:::Reads
+    HiCLibrary3[HiC Library 3] --> HiСReads5[HiС Reads 5]:::Reads
     
     HiFIReads5 --> GenomeAssembly2.v1[Assembly2.v1]:::Assembly
     HiFIReads6 --> GenomeAssembly2.v1[Assembly2.v1]:::Assembly
@@ -134,6 +142,10 @@ flowchart TD
     classDef Project fill:#b6d7a8,font-color:black,font-size:30
     classDef Individual fill:#b6d7a8,font-color:black,font-size:30
     classDef Sample fill:#68E6CF,font-color:black,font-size:30
+    classDef DNAExtract fill:green,font-color:black,font-size:30
+    classDef HiCCrosslinking fill:lime,font-color:black,font-size:30
+    classDef HiCReaction fill:orange,font-color:black,font-size:30
+    classDef RNAExtract fill:magenta,font-color:black,font-size:30
     classDef Library fill:#6fa8dc,font-color:black,font-size:30
     classDef Reads fill:#ffd966,font-color:black,font-size:30
     classDef Assembly fill:#c27ba0,font-color:black,font-size:30
