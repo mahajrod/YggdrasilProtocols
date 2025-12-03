@@ -1,0 +1,24 @@
+#YGGDRASIL_GENOME_RELEASE_DESCRIPTION v0.1
+
+Haplotypes:
+	Haplotypes can be rep+alt, mat+pat, hap1+hap2 or hap0
+
+	*rep.fasta.gz - representative (pseudo)haplotype of a diploid containg both sex chromosomes, as well as mtDNA
+	*alt.fasta.gz - second (pseudo)haplotype of a diploid, but without any of sex chromosomes and mtDNA
+
+	*mat.fasta.gz - maternal (pseudo)haplotype of a diploid (contains X for mammal or W for birds, for example), as well as mtDNA
+ 	*rep.fasta.gz - paternal (pseudo)haplotype of a diploid (contains Y for mammal or Z for birds, for example), no mtDNA
+
+ 	*hap1.fasta.gz - hap1 (pseudo)haplotype of a diploid (sex chromosomes are unknown or undescribed for species)
+ 	*hap2.fasta.gz - hap2 (pseudo)haplotype of a diploid (sex chromosomes are unknown or undescribed for species) 
+
+ 	*hap0.fasta.gz - consensus pseudohaplotype of a diploid or a single haplotype of the haploid 
+
+Stages:
+	Stages can be final, ref_scaffolding, hic_scaffolding, purge_dups or contig
+
+	*contig.*.fasta.gz              - contig sequences from the assembler
+	*purge_dups.*.fasta.gz          - sequences ungergone purging of haplotypic(arteficial) duplications
+	*hic_scaffolding.*.fasta.gz     - sequences after Hi-C scaffolding, but not manually curated yet  
+	*final.*.fasta.gz               - sequences after manual curation and filtration. Should be considered as the final version of the genome
+	*ref_scaffolding.*.fasta.gz     - sequences after reference-based scaffolding using a related genome and split of arteficial telomeric merges. Usually appear if no Hi-C data was available.
