@@ -1,0 +1,27 @@
+# YGGDRASIL_GENOME_RELEASE_DESCRIPTION_VGP_STYLE v0.1
+This genome was already submitted to GenomeArk or is intended for this.
+
+Haplotype files:
+	Haplotypes can be rep+sec, mat+pat or  hap1+hap2
+
+	*rep.cur<date>.fasta.gz - representative (pseudo)haplotype of a diploid containg both sex chromosomes, as well as mtDNA
+	*sec.cur<date>.fasta.gz - secondary(second) (pseudo)haplotype of a diploid, but without any of sex chromosomes and mtDNA
+
+	*mat.cur<date>.fasta.gz - maternal (pseudo)haplotype of a diploid (contains X for mammal or W for birds, for example), as well as mtDNA
+ 	*pat.cur<date>.fasta.gz - paternal (pseudo)haplotype of a diploid (contains Y for mammal or Z for birds, for example), no mtDNA
+
+ 	*hap1.cur<date>.fasta.gz - hap1 (pseudo)haplotype of a diploid (sex chromosomes are unknown or undescribed for species, or a ZZ/XX individual)
+ 	*hap2.cur<date>.fasta.gz - hap2 (pseudo)haplotype of a diploid (sex chromosomes are unknown or undescribed for species, or a ZZ/XX individual)
+
+ 	*hap0.cur<date>.fasta.gz - consensus pseudohaplotype of a diploid or a single haplotype of the haploid
+
+Other files:
+    *.len              - lengths of scaffolds
+    *.reorderlist      - scaffold ids sorted in the same order as in the corresponding fasta file. Contains chromosomal scaffolds, attached to them unlocalized scaffolds and mtDNA
+    *.chromosomes      - per-scaffold Sanger-style description of chromosomal and attached to them unlocalized scaffolds
+    *.description      - per-scaffold NCBI style descriptions
+    *.orderlist        - orderlist of scaffolds for visualization in MACE
+    *.whitelist        - whitelist of scaffolds for visualizations in MACE. Usually contains only chromosomal scaffolds.
+    *.evaluation       - assembly metrics. Contains values for all haplotypes
+    *.pretext          - Hi-C contact map with tracks of various types. Use PretextView (https://github.com/sanger-tol/PretextView/releases) tool to show it
+
